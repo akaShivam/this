@@ -10,7 +10,7 @@ svg {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   fill: #00000000;
-  stroke: #AAAAAAAA;
+  stroke: #8B8B8B22;
   stroke-width: 1px;
   rx: 6px;
   ry: 6px;
@@ -80,18 +80,18 @@ div.ellipsis {
 }
 
 .progress-item {
-  outline: 2px solid rgb(225, 228, 232);
+  outline: 1px solid rgb(225, 228, 232);
   border-collapse: collapse;
 }
 
 .lang {
   font-weight: 600;
   margin-right: 4px;
-  color: rgb(123, 123, 123);
+  color: rgb(135, 135, 135);
 }
 
 .percent {
-  color: rgb(133,133,133)
+  color: rgb(150,150,150)
 }
 </style>
 <g transform="translate(5, 5)">
