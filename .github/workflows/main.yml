@@ -64,7 +64,6 @@ jobs:
         git config --global user.email "github-stats[bot]@akaShivam.github.io"
         git stash
         git checkout asset4 2>/dev/null || git checkout --orphan asset4 && git rm -rf . && git checkout master -- generated/
-        git stash pop
         # "echo" returns true so the build succeeds, even if no changed files
-        git commit -m 'Update generated files' || echo
-        git push origin asset4
+        git commit --amend -m 'Update generated files' ||git commit -m 'Update generated files' || echo
+        git push origin asset4 -f
