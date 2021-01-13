@@ -10,7 +10,7 @@ svg {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   fill: #00000000;
-  stroke: rgb(225, 228, 232);
+  stroke: rgb(225, 0, 0);
   stroke-width: 1px;
   rx: 6px;
   ry: 6px;
@@ -27,8 +27,8 @@ h2 {
   line-height: 24px;
   font-size: 16px;
   font-weight: 600;
-  color: rgb(36, 41, 246);
-  fill: rgb(36, 41, 246);
+  color: rgb(65, 131, 196);
+  fill: rgb(65, 131, 196);
 }
 
 ul {
@@ -44,8 +44,8 @@ li {
   margin-right: 2ch;
   align-items: center;
   flex-wrap: nowrap;
-  transform: translateY(-300%);
-  animation-duration: 2s;
+  transform: translateX(-500%);
+  animation-duration: 1s;
   animation-name: slideIn;
   animation-function: ease-in-out;
   animation-fill-mode: forwards;
@@ -53,7 +53,7 @@ li {
 
 @keyframes slideIn {
   to {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -87,7 +87,7 @@ div.ellipsis {
 .lang {
   font-weight: 600;
   margin-right: 4px;
-  color: rgb(36, 241, 46);
+  color: rgb(123, 123, 123);
 }
 
 .percent {
@@ -100,7 +100,7 @@ div.ellipsis {
 <foreignObject>
 <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
 
-<h2>Languages Used (By File Size)</h2>
+<h2>Most Languages Used</h2>
 
 <div>
 <span class="progress">
