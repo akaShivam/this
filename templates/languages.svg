@@ -10,7 +10,7 @@ svg {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   fill: #00000000;
-  stroke: rgb(225, 0, 0);
+  stroke: #AAAAAAAA;
   stroke-width: 1px;
   rx: 6px;
   ry: 6px;
@@ -73,7 +73,7 @@ div.ellipsis {
   display: flex;
   height: 8px;
   overflow: hidden;
-  background-color: rgb(225, 228, 232);
+  background-color: rgb(200, 200, 200);
   border-radius: 6px;
   outline: 1px solid transparent;
   margin-bottom: 1em;
@@ -91,7 +91,7 @@ div.ellipsis {
 }
 
 .percent {
-  color: rgb(88, 196, 105)
+  color: rgb(133,133,133)
 }
 </style>
 <g transform="translate(5, 5)">
