@@ -64,7 +64,7 @@ div.ellipsis {
 }
 
 .octicon {
-  fill: rgb(88, 96, 105);
+  fill: rgb(248, 96, 105);
   margin-right: 0.5ch;
   vertical-align: top;
 }
@@ -87,11 +87,11 @@ div.ellipsis {
 .lang {
   font-weight: 600;
   margin-right: 4px;
-  color: rgb(36, 41, 46);
+  color: rgb(36, 241, 46);
 }
 
 .percent {
-  color: rgb(88, 96, 105)
+  color: rgb(88, 196, 105)
 }
 </style>
 <g transform="translate(5, 5)">
