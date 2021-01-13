@@ -27,8 +27,8 @@ h2 {
   line-height: 24px;
   font-size: 16px;
   font-weight: 600;
-  color: rgb(36, 41, 46);
-  fill: rgb(36, 41, 46);
+  color: rgb(36, 41, 246);
+  fill: rgb(36, 41, 246);
 }
 
 ul {
@@ -44,7 +44,7 @@ li {
   margin-right: 2ch;
   align-items: center;
   flex-wrap: nowrap;
-  transform: translateX(-200%);
+  transform: translateY(-300%);
   animation-duration: 2s;
   animation-name: slideIn;
   animation-function: ease-in-out;
@@ -53,7 +53,7 @@ li {
 
 @keyframes slideIn {
   to {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
