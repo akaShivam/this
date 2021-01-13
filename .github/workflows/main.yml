@@ -66,4 +66,4 @@ jobs:
         git stash pop
         # "echo" returns true so the build succeeds, even if no changed files
         git commit -m 'Update generated files' || echo
-        git push
+        git push origin assets
