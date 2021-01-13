@@ -38,7 +38,14 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
-
+    
+    - name: Make assets branch
+      run: |
+        git config --global user.name "akaShivam/this"
+        git config --global user.email "github-stats[bot]@akaShivam.github.io"
+        git checkout assets 2>/dev/null || git checkout --orphan assets && git rm -rf .
+        git checkout master
+        
     # Install dependencies with `pip`
     - name: Install requirements
       run: |
@@ -62,7 +69,7 @@ jobs:
         git config --global user.name "akaShivam/this"
         git config --global user.email "github-stats[bot]@akaShivam.github.io"
         git stash
-        git checkout assets 2>/dev/null || git checkout --orphan assets && git rm -rf .
+        git checkout assets
         git stash pop
         # "echo" returns true so the build succeeds, even if no changed files
         git commit -m 'Update generated files' || echo
