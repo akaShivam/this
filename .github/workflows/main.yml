@@ -62,6 +62,7 @@ jobs:
       run: |
         git config --global user.name "akaShivam/this"
         git config --global user.email "github-stats[bot]@akaShivam.github.io"
+        git add .
         git commit -m 'Updated files' || echo
         git checkout asset4 2>/dev/null || git checkout --orphan asset4 && git rm -rf . && git checkout master -- generated/
         # "echo" returns true so the build succeeds, even if no changed files
