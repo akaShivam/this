@@ -44,7 +44,7 @@ li {
   margin-right: 2ch;
   align-items: center;
   flex-wrap: nowrap;
-  transform: translateX(-500%);
+  transform: translateX(-200%);
   animation-duration: 2s;
   animation-name: slideIn;
   animation-function: ease-in-out;
