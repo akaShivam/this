@@ -39,12 +39,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
     
-    - name: Make assets branch
-      run: |
-        git config --global user.name "akaShivam/this"
-        git config --global user.email "github-stats[bot]@akaShivam.github.io"
-        git checkout assets 2>/dev/null || git checkout --orphan assets && git rm -rf .
-        git checkout master
         
     # Install dependencies with `pip`
     - name: Install requirements
