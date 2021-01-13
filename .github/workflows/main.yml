@@ -62,7 +62,7 @@ jobs:
         git config --global user.name "akaShivam/this"
         git config --global user.email "github-stats[bot]@akaShivam.github.io"
         git stash
-        git checkout assets 2>/dev/null || git checkout --orphan assets && git rm -rf
+        git checkout assets 2>/dev/null || git checkout --orphan assets && git rm -rf .
         git stash pop
         # "echo" returns true so the build succeeds, even if no changed files
         git commit -m 'Update generated files' || echo
