@@ -246,6 +246,10 @@ class Stats(object):
         self._repos = None
         self._lines_changed = None
         self._views = None
+        
+        self._count_stats_from_contributed = os.getenv("COUNT_STATS_FROM_CONTRIBUTED")
+        if self._count_stats_from_contributed == None:
+            self._count_stats_from_contributed = False
 
     async def to_str(self) -> str:
         """
@@ -304,8 +308,10 @@ Languages:
                            .get("data", {})
                            .get("viewer", {})
                            .get("repositories", {}))
-            repos = (contrib_repos.get("nodes", [])
-                     + owned_repos.get("nodes", []))
+            
+            repos = owned_repos.get("nodes", [])
+            if self._count_stats_from_contributed:
+                repos += contrib_repos.get("nodes", []
 
             for repo in repos:
                 name = repo.get("nameWithOwner")
