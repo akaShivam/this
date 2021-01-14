@@ -247,12 +247,11 @@ class Stats(object):
         self._lines_changed = None
         self._views = None
         
-        print(os.getenv("COUNT_STATS_FROM_CONTRIBUTED"))
+        self.count_open_source_projects = 0
         self._count_stats_from_contributed = False
-        
         if os.getenv("COUNT_STATS_FROM_CONTRIBUTED") != None:
             self._count_stats_from_contributed = True
-            
+        
     async def to_str(self) -> str:
         """
         :return: summary of all available statistics
@@ -266,7 +265,7 @@ class Stats(object):
 Stargazers: {await self.stargazers:,}
 Forks: {await self.forks:,}
 All-time contributions: {await self.total_contributions:,}
-Repositories with contributions: {len(await self.repos)}
+Repositories with contributions: {len(await self.repos) + self.count_open_source_projects}
 Lines of code added: {lines_changed[0]:,}
 Lines of code deleted: {lines_changed[1]:,}
 Lines of code changed: {lines_changed[0] + lines_changed[1]:,}
@@ -314,6 +313,8 @@ Languages:
             repos = owned_repos.get("nodes", [])
             if self._count_stats_from_contributed:
                 repos += contrib_repos.get("nodes", [])
+            else:
+                self.count_open_source_projects += contrib_repos.get("nodes", []).length;
 
             for repo in repos:
                 name = repo.get("nameWithOwner")
