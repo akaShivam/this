@@ -311,7 +311,7 @@ Languages:
             
             repos = owned_repos.get("nodes", [])
             if self._count_stats_from_contributed:
-                repos += contrib_repos.get("nodes", []
+                repos += contrib_repos.get("nodes", [])
 
             for repo in repos:
                 name = repo.get("nameWithOwner")
