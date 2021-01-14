@@ -491,7 +491,8 @@ async def main() -> None:
     Used mostly for testing; this module is not usually run standalone
     """
     access_token = os.getenv("ACCESS_TOKEN")
-    user = os.getenv("GITHUB_ACTOR")
+    # user = os.getenv("GITHUB_ACTOR")
+    user = 'rahul-jha98'
     async with aiohttp.ClientSession() as session:
         s = Stats(user, access_token, session)
         print(await s.to_str())
