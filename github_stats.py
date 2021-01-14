@@ -247,7 +247,7 @@ class Stats(object):
         self._lines_changed = None
         self._views = None
         
-        self._count_stats_from_contributed = os.getenv("COUNT_STATS_FROM_CONTRIBUTED")
+        print(os.getenv("COUNT_STATS_FROM_CONTRIBUTED"))
         self._count_stats_from_contributed = False
         
         if os.getenv("COUNT_STATS_FROM_CONTRIBUTED") != None:
