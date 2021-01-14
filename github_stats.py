@@ -248,9 +248,11 @@ class Stats(object):
         self._views = None
         
         self._count_stats_from_contributed = os.getenv("COUNT_STATS_FROM_CONTRIBUTED")
-        if self._count_stats_from_contributed == None:
-            self._count_stats_from_contributed = False
-
+        self._count_stats_from_contributed = False
+        
+        if os.getenv("COUNT_STATS_FROM_CONTRIBUTED") != None:
+            self._count_stats_from_contributed = True
+            
     async def to_str(self) -> str:
         """
         :return: summary of all available statistics
