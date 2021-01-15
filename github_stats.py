@@ -317,7 +317,8 @@ Languages:
             if self._count_stats_from_contributed:
                 repos += contrib_repos.get("nodes", [])
             else:
-                self.count_open_source_projects += len(contrib_repos.get("nodes", []));
+                self.count_open_source_projects += len(contrib_repos.get("nodes", []))
+                print('unpdated to', self.count_open_source_projects)
 
             for repo in repos:
                 name = repo.get("nameWithOwner")
@@ -424,7 +425,19 @@ Languages:
         await self.get_stats()
         assert(self._repos is not None)
         return self._repos
-
+        
+    @property
+    async def contirbuted_count(self) -> List[str]:
+        """
+        :return: list of names of user's repos
+        """
+        if self._repos is not None:
+            return self._repos
+        await self.get_stats()
+        assert(self._repos is not None)
+        print(self.count_open_source_projects)
+        return len(self._repos) + self.count_open_source_projects
+        
     @property
     async def total_contributions(self) -> int:
         """
