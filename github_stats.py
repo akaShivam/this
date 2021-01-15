@@ -268,7 +268,7 @@ class Stats(object):
 Stargazers: {await self.stargazers:,}
 Forks: {await self.forks:,}
 All-time contributions: {await self.total_contributions:,}
-Repositories with contributions: {len(await self.repos) + self.count_open_source_projects}
+Repositories with contributions: {await self.contirbuted_count}
 Lines of code added: {lines_changed[0]:,}
 Lines of code deleted: {lines_changed[1]:,}
 Lines of code changed: {lines_changed[0] + lines_changed[1]:,}
@@ -284,7 +284,8 @@ Languages:
         self._forks = 0
         self._languages = dict()
         self._repos = set()
-
+        
+        open_source_count = 0
         next_owned = None
         next_contrib = None
         while True:
@@ -317,8 +318,8 @@ Languages:
             if self._count_stats_from_contributed:
                 repos += contrib_repos.get("nodes", [])
             else:
-                self.count_open_source_projects += len(contrib_repos.get("nodes", []))
-                print('unpdated to', self.count_open_source_projects)
+                open_source_count += len(contrib_repos.get("nodes", []))
+                
 
             for repo in repos:
                 name = repo.get("nameWithOwner")
@@ -359,6 +360,8 @@ Languages:
         langs_total = sum([v.get("size", 0) for v in self._languages.values()])
         for k, v in self._languages.items():
             v["prop"] = 100 * (v.get("size", 0) / langs_total)
+        
+        self.count_open_source_projects = open_source_count
 
     @property
     async def name(self) -> str:
