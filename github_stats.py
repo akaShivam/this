@@ -430,16 +430,12 @@ Languages:
         return self._repos
         
     @property
-    async def contirbuted_count(self) -> List[str]:
+    async def contirbuted_count(self) -> int:
         """
         :return: list of names of user's repos
         """
-        if self._repos is not None:
-            return self._repos
-        await self.get_stats()
-        assert(self._repos is not None)
-        print(self.count_open_source_projects)
-        return len(self._repos) + self.count_open_source_projects
+        print(slef.count_open_source_projects)
+        return len(self.repos) + self.count_open_source_projects
         
     @property
     async def total_contributions(self) -> int:
