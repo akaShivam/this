@@ -249,6 +249,9 @@ class Stats(object):
         
         self.count_open_source_projects = 0
         self._count_stats_from_contributed = False
+        print(os.getenv("COUNT_STATS_FROM_CONTRIBUTED2"))
+        print(type(os.getenv("COUNT_STATS_FROM_CONTRIBUTED2")))
+        print(len(os.getenv("COUNT_STATS_FROM_CONTRIBUTED2")))
         print(len(os.getenv("COUNT_STATS_FROM_CONTRIBUTED2")) == 0)
         print(isinstance(os.getenv("COUNT_STATS_FROM_CONTRIBUTED2"), type(None)))
         if os.getenv("COUNT_STATS_FROM_CONTRIBUTED") is not None:
