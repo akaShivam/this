@@ -268,7 +268,7 @@ class Stats(object):
 Stargazers: {await self.stargazers:,}
 Forks: {await self.forks:,}
 All-time contributions: {await self.total_contributions:,}
-Repositories with contributions: {await self.contirbuted_count}
+Repositories with contributions: {await self.contirbuted_count():, }
 Lines of code added: {lines_changed[0]:,}
 Lines of code deleted: {lines_changed[1]:,}
 Lines of code changed: {lines_changed[0] + lines_changed[1]:,}
@@ -429,7 +429,6 @@ Languages:
         assert(self._repos is not None)
         return self._repos
         
-    @property
     async def contirbuted_count(self) -> int:
         """
         :return: list of names of user's repos
