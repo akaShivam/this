@@ -250,7 +250,7 @@ class Stats(object):
         self.count_open_source_projects = 0
         self._count_stats_from_contributed = False
         print(os.getenv("COUNT_STATS_FROM_CONTRIBUTED2") is not None)
-        print(os.getenv("COUNT_STATS_FROM_CONTRIBUTED2") is None)
+        print(os.getenv("COUNT_STATS_FROM_CONTRIBUTED2"))
         if os.getenv("COUNT_STATS_FROM_CONTRIBUTED") is not None:
             print("Inside not None")
             self._count_stats_from_contributed = True
