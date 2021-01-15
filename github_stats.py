@@ -317,7 +317,7 @@ Languages:
             if self._count_stats_from_contributed:
                 repos += contrib_repos.get("nodes", [])
             else:
-                self.count_open_source_projects += contrib_repos.get("nodes", []).length;
+                self.count_open_source_projects += len(contrib_repos.get("nodes", []));
 
             for repo in repos:
                 name = repo.get("nameWithOwner")
