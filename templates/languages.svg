@@ -91,7 +91,7 @@ div.ellipsis {
   color: rgb(150,150,150)
 }
 </style>
-<g x='5'  y='5'>
+<g x='10' y='10'>
 <rect id="background" />
 <g x='24' y='24' >
 <foreignObject x='24' y='24' width="326" height="176">
