@@ -16,6 +16,9 @@ svg {
   ry: 6px;
 }
 
+foreignObject {
+  background: red;
+}
 h2 {
   margin-top: 0;
   margin-bottom: 0.75em;
@@ -89,10 +92,10 @@ div.ellipsis {
   color: rgb(150,150,150)
 }
 </style>
-<g x="5" y="5">
+<g x="8" y="8">
 <rect id="background" />
 <g>
-<foreignObject x="16" y="16" width="318" height="176">
+<foreignObject x="16" y="16" width="336" height="186">
 <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
 
 <h2>Most Used Languages</h2>
