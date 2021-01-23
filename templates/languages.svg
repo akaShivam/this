@@ -93,8 +93,8 @@ div.ellipsis {
 </style>
 <g x='5'  y='5'>
 <rect id="background" />
-<g x='12' y='12'>
-<foreignObject width="326" height="176">
+<g >
+<foreignObject x='12' y='12' width="326" height="176">
 <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
 
 <h2>Most Used Languages</h2>
