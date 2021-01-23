@@ -357,7 +357,7 @@ Languages:
         #       specific filetypes
         langs_total = sum([v.get("size", 0) for v in self._languages.values()])
         to_remove = []
-        self._languages = sorted(self._languages.items(), key = labmda t: t[1].get("size"))
+        self._languages = sorted(self._languages.items(), key = lambda t: t[1].get("size"))
         
         for k, v in self._languages.items():
             v["prop"] = 100 * (v.get("size", 0) / langs_total)
