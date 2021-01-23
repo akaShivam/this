@@ -16,11 +16,6 @@ svg {
   ry: 6px;
 }
 
-foreignObject {
-  width: calc(100% - 10px - 32px);
-  height: calc(100% - 10px - 32px);
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -71,8 +66,8 @@ tr {
 </style>
 <g transform="translate(5, 5)">
 <rect id="background" />
-<g transform="translate(16, 16)">
-<foreignObject>
+<g transform="translate(12, 12)">
+<foreignObject width='326' height='176'>
 <div xmlns="http://www.w3.org/1999/xhtml">
 
 <table>
