@@ -11,7 +11,7 @@ svg {
   height: calc(100% - 10px);
   fill: #00000000;
   stroke: #8B8B8B22;
-  stroke-width: 1px;
+  stroke-width: 5px;
   rx: 6px;
   ry: 6px;
 }
