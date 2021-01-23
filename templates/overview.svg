@@ -64,10 +64,9 @@ tr {
   }
 }
 </style>
-<g transform="translate(5, 5)">
-<rect id="background" />
-<g transform="translate(12, 12)">
-<foreignObject width='326' height='176'>
+<g>
+<rect x='5' y ='5' id="background" />
+<foreignObject x='19' y ='19' width='322' height='172'>
 <div xmlns="http://www.w3.org/1999/xhtml">
 
 <table>
