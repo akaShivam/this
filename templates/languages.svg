@@ -90,7 +90,7 @@ div.ellipsis {
 </style>
 <g>
 <rect x='5' y ='5' id="background" />
-<g x='24' y='24' >
+
 <foreignObject x='17' y='17' width="326" height="176">
 <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
 
@@ -110,6 +110,5 @@ div.ellipsis {
 
 </div>
 </foreignObject>
-</g>
 </g>
 </svg>
