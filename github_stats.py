@@ -266,7 +266,7 @@ class Stats(object):
 Stargazers: {await self.stargazers:,}
 Forks: {await self.forks:,}
 All-time contributions: {await self.total_contributions:,}
-Repositories with contributions: {await self.contirbuted_count():, }
+Repositories with contributions: {len(await self.all_repos) }
 Lines of code added: {lines_changed[0]:,}
 Lines of code deleted: {lines_changed[1]:,}
 Lines of code changed: {lines_changed[0] + lines_changed[1]:,}
@@ -282,8 +282,9 @@ Languages:
         self._forks = 0
         self._languages = dict()
         self._repos = set()
+        self._contrib_repos = set()
         
-        open_source_count = 0
+        self._ignored_repos = set()
         next_owned = None
         next_contrib = None
         while True:
@@ -316,7 +317,11 @@ Languages:
             if self._count_stats_from_contributed:
                 repos += contrib_repos.get("nodes", [])
             else:
-                open_source_count += len(contrib_repos.get("nodes", []))
+                for node in contrib_repos.get("nodes", []):
+                    name = repo.get("nameWithOwner")
+                    if name in self._repos or name in self._exclude_repos:
+                        continue
+                    self._contrib_repos.add(name)
                 
 
             for repo in repos:
@@ -426,13 +431,23 @@ Languages:
         await self.get_stats()
         assert(self._repos is not None)
         return self._repos
+    
+    @property
+    async def all_repos(self) -> List[str]:
+        """
+        :return: list of names of user's repos
+        """
+        if self._repos is not None:
+            return self._repos | self._contrib_repos
+        await self.get_stats()
+        assert(self._repos is not None)
+        return self._repos | self._contrib_repos
         
     async def contirbuted_count(self) -> int:
         """
         :return: list of names of user's repos
         """
-        print(slef.count_open_source_projects)
-        return len(self.repos) + self.count_open_source_projects
+        return len(self.repos)
         
     @property
     async def total_contributions(self) -> int:
