@@ -7,6 +7,9 @@
 ![](https://raw.githubusercontent.com/akaShivam/this/asset4/generated/overview.svg)
 ![](https://raw.githubusercontent.com/akaShivam/this/asset4/generated/languages.svg)
 
+
+![](./generated/overview.svg)
+![](./generated/languages.svg)
 </a>
 
 Generate visualizations of GitHub user and repository statistics using GitHub
