@@ -98,7 +98,6 @@ div.ellipsis {
 </style>
 <g>
 <rect x="5" y="5" id="background" />
-<g>
 <foreignObject x="21" y="21" width="318" height="168">
 <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
 
@@ -235,6 +234,5 @@ fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 
 </div>
 </foreignObject>
-</g>
 </g>
 </svg>
