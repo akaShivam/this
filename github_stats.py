@@ -317,7 +317,7 @@ Languages:
             if self._count_stats_from_contributed:
                 repos += contrib_repos.get("nodes", [])
             else:
-                for node in contrib_repos.get("nodes", []):
+                for repo in contrib_repos.get("nodes", []):
                     name = repo.get("nameWithOwner")
                     if name in self._repos or name in self._exclude_repos:
                         continue
