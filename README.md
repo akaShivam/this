@@ -8,9 +8,11 @@
 ![](https://raw.githubusercontent.com/akaShivam/this/asset4/generated/languages.svg)
 
 
-![](./generated/overview.svg)
-![](./generated/languages.svg)
+
+
 </a>
+![](./generated/languages.svg)
+![](./generated/overview.svg)
 
 Generate visualizations of GitHub user and repository statistics using GitHub
 Actions.
