@@ -15,6 +15,10 @@ svg {
   rx: 6px;
   ry: 6px;
 }
+foreignObject {
+  width: calc(100% - 10px - 32px);
+  height: calc(100% - 10px - 24px);
+}
 
 table {
   width: 100%;
@@ -66,7 +70,7 @@ tr {
 </style>
 <g>
 <rect x='5' y ='5' id="background" />
-<foreignObject x='19' y ='19' width='322' height='172'>
+<foreignObject x='21' y ='17' width='318' height='176'>
 <div xmlns="http://www.w3.org/1999/xhtml">
 
 <table>
