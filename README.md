@@ -12,9 +12,10 @@
 
 </a>
 
+![](./generated/overview.svg)
 ![](./generated/languages.svg)
 
-![](./generated/overview.svg)
+
 
 Generate visualizations of GitHub user and repository statistics using GitHub
 Actions.
