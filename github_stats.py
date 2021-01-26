@@ -364,7 +364,6 @@ Languages:
         to_remove = []
         for k, v in self._languages.items():
             v["prop"] = 100 * (v.get("size", 0) / langs_total)
-        self.count_open_source_projects = open_source_count
 
     @property
     async def name(self) -> str:
