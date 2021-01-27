@@ -1,4 +1,4 @@
-# [GitHub Stats Transparent](https://github.com/rahul-jha98/github-stats-transparent)
+# GitHub Stats Visualizations : Transparent
 > Generate visualizations of GitHub user and repository statistics using GitHub
 Actions.
 
@@ -9,9 +9,13 @@ Actions.
 
 </a>
 
+> NOTE: This repository is my extension of the repo [jstrieb/github-stats](https://github.com/jstrieb/github-stats). This repo was meant to serve as a detached fork of his project. If you like this repository make sure you also star his repository to show appreciation for his work. 
 
-This project is currently a work-in-progress; there will always be more
-interesting stats to display.
+## Why Transparent
+With the introduction of dark mode in Github it has become difficult to set an image background that looks consistent with the background in both dark and light mode. 
+
+To solve this the most obvious solution was to make the background transparent. After this all that was left was to choose colors for text and icons that looks reasonably good in both the modes.
+
 
 ## Background
 
