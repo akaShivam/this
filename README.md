@@ -11,7 +11,23 @@ Actions.
 
 > NOTE: This repository is my extension of the repo [jstrieb/github-stats](https://github.com/jstrieb/github-stats). This repo was meant to serve as a detached fork of his project. If you like this repository make sure you also star his repository to show appreciation for his work. 
 
-# Installation
+## Disclaimer
+
+If the project is used with an access token that has sufficient permissions to
+read private repositories, it may leak details about those repositories in
+error messages. For example, the `aiohttp` library—used for asynchronous API
+requests—may include the requested URL in exceptions, which can leak the name
+of private repositories. If there is an exception caused by `aiohttp`, this
+exception will be viewable in the Actions tab of the repository fork, and
+anyone may be able to see the name of one or more private repositories.
+
+Due to some issues with the GitHub statistics API, there are some situations
+where it returns inaccurate results. Specifically, the repository view count
+statistics and total lines of code modified are probably somewhat inaccurate.
+Unexpectedly, these values will become more accurate over time as GitHub
+caches statistics for your repositories.
+
+## Installation
 
 <!-- TODO: Add details and screenshots -->
 
@@ -65,48 +81,6 @@ After wasting a day playing with different color values finally settled on one. 
 ![](https://raw.githubusercontent.com/rahul-jha98/github-stats-transparent/main/readme_images/light.png)
 
 ![](https://raw.githubusercontent.com/rahul-jha98/github-stats-transparent/main/readme_images/dark.png)
-
-
-## Background
-
-When someone views a profile on GitHub, it is often because they are curious
-about a user's open source projects and contributions. Unfortunately, that
-user's stars, forks, and pinned repositories do not necessarily reflect the
-contributions they make to private repositories. The data likewise does not
-present a complete picture of the user's total contributions beyond the current
-year.
-
-This project aims to collect a variety of profile and repository statistics
-using the GitHub API. It then generates images that can be displayed in
-repository READMEs, or in a user's [Profile
-README](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
-
-Since the project runs on GitHub Actions, no server is required to regularly
-regenerate the images with updated statistics. Likewise, since the user runs
-the analysis code themselves via GitHub Actions, they can use their GitHub
-access token to collect statistics on private repositories that an external
-service would be unable to access.
-
-## Disclaimer
-
-If the project is used with an access token that has sufficient permissions to
-read private repositories, it may leak details about those repositories in
-error messages. For example, the `aiohttp` library—used for asynchronous API
-requests—may include the requested URL in exceptions, which can leak the name
-of private repositories. If there is an exception caused by `aiohttp`, this
-exception will be viewable in the Actions tab of the repository fork, and
-anyone may be able to see the name of one or more private repositories.
-
-Due to some issues with the GitHub statistics API, there are some situations
-where it returns inaccurate results. Specifically, the repository view count
-statistics and total lines of code modified are probably somewhat inaccurate.
-Unexpectedly, these values will become more accurate over time as GitHub
-caches statistics for your repositories. For more information, see issue
-[#2](https://github.com/jstrieb/github-stats/issues/2) and
-[#3](https://github.com/jstrieb/github-stats/issues/3).
-
-
-
 
 
 # Related Projects
