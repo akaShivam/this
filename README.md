@@ -18,9 +18,9 @@ To solve this the most obvious solution was to make the background transparent. 
 
 After wasting a day playing with different color values finally settled on one. Hope you like it. 
 
-![](./readme_images/light.png)
+![](https://raw.githubusercontent.com/rahul-jha98/github-stats-transparent/main/readme_images/light.png)
 
-![](./readme_images/dark.png)
+![](https://raw.githubusercontent.com/rahul-jha98/github-stats-transparent/main/readme_images/dark.png)
 
 
 ## Background
