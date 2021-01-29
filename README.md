@@ -36,13 +36,16 @@ anyone may be able to see the name of one or more private repositories.
    link](../../settings/secrets/actions) to go to the "Secrets" page.
    Otherwise, go to the "Settings" tab of the newly-created repository and go
    to the "Secrets" page (bottom left).
-
+   ![](https://raw.githubusercontent.com/rahul-jha98/github-stats-transparent/main/readme_images/Actions.png)
+   
 4. Create a new secret with the name `ACCESS_TOKEN` and paste the copied
    personal access token as the value.
-
+   ![](https://raw.githubusercontent.com/rahul-jha98/github-stats-transparent/main/readme_images/Token.png)
+   
 5. If you want to ignore certain repos, add them (separated by commas) to a new
    secret—created as before—called `EXCLUDED`. 
-
+   [](https://raw.githubusercontent.com/rahul-jha98/github-stats-transparent/main/readme_images/Exclude.png)
+   
 6. If you want to ignore certain languages, add them (separated by commas) to a new secret called 
    `EXCLUDED_LANGS`.
 
@@ -50,7 +53,7 @@ anyone may be able to see the name of one or more private repositories.
    public repositories that you have forked and contributed to. But if you want to count stats from
    forked repositories also you can do so by creating a new secret called `COUNT_STATS_FROM_FORKS`. 
    For the value you can put any random value because the action only checks if the secret is set or not.
-   
+   [](https://raw.githubusercontent.com/rahul-jha98/github-stats-transparent/main/readme_images/Forks.png)
 
 8. Go to the [Actions
    Page](../../actions?query=workflow%3A"Generate+Stats+Images") and press "Run
